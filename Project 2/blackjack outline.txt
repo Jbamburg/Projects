@@ -1,0 +1,77 @@
+BLACKJACK:
+
+#include<time.h>
+#include<cstdlib>
+set card values
+
+Ask user to 
+(1) Play blackjack      [Begin game of blackjack and record data to LastNameHistory.txt]
+(2) View game history        [Display the LastNameHistory.txt file 
+(3) Quit game     [Thank you for playing message with a end total money]
+
+
+
+if play blackjack
+ask for credit amount 
+ask how much they would like to bet [10 min and 150 max]
+
+deal one card to player1 and dealer1 [dealers card not shown]
+deal another card to player1 [this one can be shown]
+asks to hit or stay [unless a blackjack occurs]
+
+if
+user gets blackjack on second card, reveal dealers first + second card
+if 
+dealer doesn't also have blackjack, player1 wins
+if
+dealer also has blackjack, money is pushed and neither player1 nor dealer1 win/lose any money
+{IF BLACKJACK, player1 should not be asked to hit or stay.}
+
+if 
+neither player1/dealer1 get blackjack on first two cards, ask the player1 if they would like to hit
+if
+yes [hit], deal one more card to player1 [max 3 cards]
+if 
+Card 1 + Card 2 + Card 3 > 21 
+BUST, Player1 loses and Dealer1 wins
+if
+Card 1 + Card 2 + Card 3 < 21 
+Player 1 MUST stay
+
+if  (no bust from Player1)
+yes [stay after no bust from Player1], reveal dealer1 first and second card
+if 
+Card 1 + Card 2 > 17 [17 is max for dealer]
+DONT HIT AS DEALER 
+if
+Card 1 + Card 2 < 17 
+HIT [max 3 cards]
+if
+yes [hit], Card 1 + Card 2 + Card 3 > 21 
+BUST, Dealer1 loses and Player1 wins 
+if 
+bust, take money and reveal dealer1 hand w/ second card 
+if 
+Card 1 + Card 2 + Card 3 < 21 but greater than 17 dealer will stay
+
+if 
+Player1 and Dealer1 have not busted, whoever is closer to 21 without going over wins 
+if 
+Player1 wins, credits goes into account
+if 
+Player1 loses, credits are deducted from account and gone forever
+if
+Dealer 1 loses to Player 1, money is given to Player1 account 
+
+
+
+
+
+
+
+
+
+
+
+
+
